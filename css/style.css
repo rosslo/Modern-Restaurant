@@ -202,7 +202,7 @@ nav ul li a{
 footer{
 	text-align: center;
 }
-footer input{
+#fouth input{
 	display: block;
 	width: 60%;
 	padding: 10px;
@@ -213,15 +213,20 @@ footer input{
 	border: 2px solid #fff;
 	background-color: transparent;
 }
-footer input:hover, footer input:focus{
+#fouth input:hover, #fouth input:focus{
 	background-color: rgba(0,0,0,0.4);
 	-o-transition: all .20s linear;
 	-moz-transition: all .20s linear;
 	-webkit-transition: all .20s linear;
 	transition: all .20s linear;
 }
-
-
+.glyphicon-time{
+	color: #666;
+}
+label span{
+	font-weight: normal;
+	color: red;
+}
 /*----------------------------------- @media ---------------------------------------*/
 
 @media (min-width: 1200px) {
