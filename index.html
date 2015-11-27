@@ -45,11 +45,13 @@
 		<div class="container">			
 			<h1><span class="line left"></span>Lorem ipsum dolor sit amet<span class="line right"></span></h1>		
 			<h6>Lorem ipsum dolor sit amet, consectetr adipisicing elit, sed do eiusmod<br />tempor incididunt ut labore et dolore magna aliqua.</h6>
+		</div>
 			<div id="menu-btn">
 			<button type="button" class="btn" id="desserts_btn">DESSERTS</button>
 			<button type="button" class="btn active" id="meats_btn">MEATS</button>
 			<button type="button" class="btn" id="salads_btn">SALADS</button>
 			</div>
+		<div class="container">
 			<!--DESSERTS-->
 			<div class="row hide" id="desserts">
 				<div class="col-sm-2">
@@ -521,7 +523,7 @@
 		 $(function () {
                 $('#datetimepicker1').datetimepicker();
             });		
-		$("ul.navbar-nav li a").click(function(){
+		$("ul.navbar-nav li a").on('focus',function(){
 				slideTo($(this));
 				/*var number = $(this).parent().index();
 				navbarBg(number);*/	
