@@ -489,8 +489,8 @@
 				<section id="fouth">
 					<div class="container">
 						<h1>Subscribe our newsletter</h1>
-						<input type="text" placeholder="WRITE YOUR E-MAIL ADRES"/>
-						<button type="submit" class="btn" id="email_btn" data-toggle="modal" data-target="#subscribe_modal">SEND E-MAIL</button>
+							<input type="email" placeholder="WRITE YOUR E-MAIL ADRES" title="Please fill your email." />
+							<button type="button" class="btn" id="email_btn">SEND E-MAIL</button>
 						<div class="modal fade" id="subscribe_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 						  <div class="modal-dialog" role="document">
 						    <div class="modal-content">
@@ -604,6 +604,16 @@
 
 		$('#first .row').on("click",'.order_btn1',function(){
 			$('#orderModal').modal();
+		});
+		$('#email_btn').click(function(){
+			var email=$(this).parent().children('input')
+			if(email.val()!=""){
+				email.val("");
+				$('#subscribe_modal').modal();
+			}
+			else{
+				email.tooltip('show');
+			}
 		});
 	});
 </script>
