@@ -523,28 +523,13 @@
 		 $(function () {
                 $('#datetimepicker1').datetimepicker();
             });		
-		$("ul.navbar-nav li a").on('focus',function(){
+		$("ul.navbar-nav li a").on('click',function(){
 				slideTo($(this));
-				/*var number = $(this).parent().index();
-				navbarBg(number);*/	
-				$("ul.navbar-nav li").removeClass('active');		
+				$("ul.navbar-nav .active").removeClass('active');	
 				$(this).parent().addClass('active');
 				$(".collapse").collapse('hide');
 				return false;				
 			});
-			/*function navbarBg(number){
-				if(number==0){
-					$('nav').css('background-color','rgba(0,0,0,0.4)');
-					$("ul.navbar-nav li a").css('color','#fff');
-					$('.underline').css('border-color','#fff');
-				}
-				else{
-					$('nav').css('background-color','#fff');
-					$("ul.navbar-nav li a").css('color','#000');
-					$('.underline').css('border-color','#000');
-				}
-				
-			}*/
 		$('#content button').click(function(){
 			slideTo($('#first_btn'));
 		});
@@ -552,6 +537,7 @@
 				var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
 				var $top = transformId(btn).offset().top - $('.navbar-header').height();
 				$body.animate({scrollTop: $top}, 1000);
+				
 				return false;
 			}
 			function transformId(btn){
@@ -561,8 +547,9 @@
 			}
  
 			$(window).scroll(function() {	
-				var currentTop = $(window).scrollTop() + $('nav').height();
-					$("ul.navbar-nav li").removeClass('active');
+				var currentTop = $(window).scrollTop() + $('.navbar-header').height();
+						$("ul.navbar-nav .active a").blur();
+						$("ul.navbar-nav .active").removeClass('active');
 				if(currentTop >= $("#first").offset().top && currentTop < $("#second").offset().top) {					
 					$("#first_btn").parent().addClass('active');
 				}
@@ -592,9 +579,7 @@
 			}
 			/*, #first .row img'*/
 		$('#first .row').on('click','.col-sm-2 button, .col-sm-2 img', function(){
-			/* $(this) = $(.col-sm-2 button)*/
 			$('#first .show .col-sm-4 .shown').removeClass('shown').addClass('hidden');	
-
 			$(this).parents('.show').children('.col-sm-4').removeClass('col-sm-4').addClass('col-sm-2');
 			$(this).parent().removeClass('col-sm-2').addClass('col-sm-4');
 			$(this).parent().children('.hidden').removeClass('hidden').addClass('shown');
