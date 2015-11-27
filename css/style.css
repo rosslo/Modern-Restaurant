@@ -26,7 +26,7 @@ section h6{
 form, form input{
 	text-align: left;
 }
-section h1, .row .col-md-4 h6, .modal-title, form{
+section h1, .row .col-sm-4 h6, .modal-title, form{
 	color: rgb(110,116,152);
 }
 p{
@@ -71,12 +71,14 @@ a{
 	-webkit-transition: width .2s linear;
 	transition: width .2s linear;
 }
+#menu-btn{
+	text-align: center;
+}
 #first #menu-btn .btn{
 	max-width: 40%;
 	font-size: 1em;
 	padding: 5px;
 	margin-right: 5px;
-	float: left;
 }
 .underline{
 	display: block;
@@ -93,9 +95,7 @@ a{
 .navbar .navbar-toggle .icon-bar {
     background-color: #fff;
 }
- .navbar-right{	             /*icon-bar nav fix brand-space*/
-	margin-top: -50px;
-}
+
 .btn{
 	font-size: 1.2em;
 	color: rgb(110,116,152);
@@ -131,15 +131,14 @@ img{
 	-webkit-transition: all .20s linear;
 	transition: all .20s linear;
 }
-#first .col-md-2 img{
-	max-width: 30%;
-	margin: 80px auto;
+#first .col-sm-2 img{
+	max-width: 100%;
 }
-#first .col-md-4 img{
+#first .col-sm-4 img{
 	width: 250px;
 	height: auto;
 }
-#third .col-md-4 img{
+#third .col-sm-4 img{
 	height: 80px;
 }
 .modal-footer .btn{
@@ -154,7 +153,7 @@ nav{
 }
 nav ul li a{
 	font-size: 18px;
-	margin: 35px;
+	margin:0 35px;
 }
 #second{
 	background-color: rgb(229,146,5);
@@ -211,7 +210,7 @@ footer{
 }
 #fouth input{
 	display: block;
-	width: 60%;
+	width: 100%;
 	padding: 10px;
 	font-size: 1em;
 	text-align: center;
@@ -239,20 +238,25 @@ input + .tooltip > .tooltip-inner {
 	font-size: 18px;
 }
 /*----------------------------------- @media ---------------------------------------*/
+@media screen and (max-device-width: 480px){
+}
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
 h1{
 	font-size: 4.5em;
 }
+#content h1{
+	margin-top: 0;
+}
 .navbar-header {
     float: left;
-    padding-top: 30px;
     text-align: center;
     width: 100%;
 }
 .navbar-brand{
 	float:none; 
 	display: block;
+	padding: 40px 0 50px 0;
 	font-size: 72px;
 	-o-transition: font-size .3s linear;
 	-moz-transition: font-size .3s linear;
@@ -267,11 +271,8 @@ h1{
 	-webkit-transition: font-size .3s linear;
 	transition: font-size .3s linear;
 }
-.nav{
-	margin-top: -70px;
-}
-.navbar-right{
-	margin-top: -70px;
+.navbar-nav{
+	margin-top: -50px;
 }
 .underline{
 	margin: 0;
@@ -291,8 +292,11 @@ h1{
 	margin: 0 20px 40px 20px;
 	float: none;
 }
-#first .col-md-2 img{
-	max-width: 100%;
+#first .col-sm-2 img{
+	margin: 80px auto;
+}
+#fouth input{
+	width: 60%;
 }
 footer{
 	text-align: left;
