@@ -244,6 +244,9 @@ input + .tooltip > .tooltip-inner {
 .navbar-nav li{
 	margin-left: 20px;
 }
+header{
+	height: 50vh;
+}
 #first .container .col-sm-2:first-child{
 	margin-left: -50px;
 }
@@ -269,14 +272,23 @@ input + .tooltip > .tooltip-inner {
 	margin: 0;
 }
 }
-
-@media screen and (min-width: 1200px) {
+@media (min-width: 980px) {
 h1{
 	font-size: 4.5em;
 }
 h6{
 	font-size: 1.5em;
 }
+#second .row .col-sm-4 h1{
+	font-size: 3.5em;
+}
+.navbar-nav li{
+	margin:0 30px;
+}
+}
+/*--------------------------------------------------------*/
+@media screen and (min-width: 1200px) {
+
 nav ul li a{
 	margin:0 35px;
 }
@@ -329,6 +341,9 @@ nav ul li a{
 }
 #first .col-sm-2 img{
 	margin: 80px auto;
+}
+#second .row .col-sm-4 h1{
+	font-size: 4.5em;
 }
 #fouth input{
 	width: 60%;
