@@ -4,8 +4,8 @@
 	<title>Modern-Restaurant</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -523,8 +523,8 @@
 		 $(function () {
                 $('#datetimepicker1').datetimepicker();
             });		
-		$("ul.navbar-nav li a").on('click',function(){
-				slideTo($(this));
+		$("ul.navbar-nav li").on('click',function(){
+				slideTo($(this).children('a'));
 				$("ul.navbar-nav .active").removeClass('active');	
 				$(this).parent().addClass('active');
 				$(".collapse").collapse('hide');
@@ -535,9 +535,8 @@
 		});
 			function slideTo(btn){
 				var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
-				var $top = transformId(btn).offset().top - $('.navbar-header').height();
-				$body.animate({scrollTop: $top}, 1000);
-				
+				var $top = transformId(btn).offset().top - $('.navbar-header').height()-2;
+				$body.animate({scrollTop: $top}, 1000);			
 				return false;
 			}
 			function transformId(btn){
@@ -547,7 +546,7 @@
 			}
  
 			$(window).scroll(function() {	
-				var currentTop = $(window).scrollTop() + $('.navbar-header').height();
+				var currentTop = $(window).scrollTop() + $('.navbar-header').height()+10;
 						$("ul.navbar-nav .active a").blur();
 						$("ul.navbar-nav .active").removeClass('active');
 				if(currentTop >= $("#first").offset().top && currentTop < $("#second").offset().top) {					
@@ -574,8 +573,10 @@
 			function changeActive(btn){
 				$('#menu-btn .active').removeClass('active');
 				btn.addClass('active');
-				$('.show').removeClass('show').addClass('hide');
-				transformId(btn).removeClass('hide').addClass('show');
+				$('.show').fadeOut("slow",function(){
+					$(this).removeClass('show').addClass('hide');
+				});
+				transformId(btn).fadeTo(1600,1).removeClass('hide').addClass('show');				
 			}
 			/*, #first .row img'*/
 		$('#first .row').on('click','.col-sm-2 button, .col-sm-2 img', function(){
