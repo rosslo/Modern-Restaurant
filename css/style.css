@@ -32,7 +32,7 @@ img{max-width:100%;height:auto;}
 #first .col-sm-4 img{width:250px;height:auto;}
 #third .col-sm-4 img{height:80px;}
 .modal-footer .btn{margin:0;}
-header{height:100vh;background:url(images/header.png) no-repeat center center;}
+header{height:100vh;background:url(images/header.jpg) no-repeat center center;}
 nav{background-color:rgba(0,0,0,0.4);}
 nav ul li a{font-size:18px;}
 #second{background-color:rgb(229,146,5);margin:0;padding:0;}
