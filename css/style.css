@@ -286,6 +286,12 @@ h6{
 	margin:0 30px;
 }
 }
+@media screen and (min-width: 1000px) and (max-width: 1180px) {
+#first .container .col-sm-2 .btn{
+	margin-top: 40px;
+	margin-left: -12px;
+}
+}
 /*--------------------------------------------------------*/
 @media screen and (min-width: 1200px) {
 
