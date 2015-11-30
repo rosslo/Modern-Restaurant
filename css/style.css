@@ -43,7 +43,7 @@ nav ul li a{font-size:18px;}
 .right{float:right;}
 .shown{display:block;}
 #first .active, .btn:hover, #content .btn:hover,#content .btn:focus, #fouth .btn:hover,#fouth .btn:focus{color:#fff;border:1px solid rgb(229,146,5);background-color:rgb(229,146,5);-o-transition:all .20s linear;-moz-transition:all .20s linear;-webkit-transition:all .20s linear;transition:all .20s linear;}
-#fouth{padding:150px 0;background:url(images/footer.png) no-repeat top center;}
+#fouth{padding:150px 0;background:url(images/footer.jpg) no-repeat top center;}
 #fouth h1{color:#fff;}
 footer{text-align:center;}
 #fouth input{display:block;width:100%;padding:10px;font-size:1em;text-align:center;color:#fff;margin:0 auto 40px;border:2px solid #fff;background-color:transparent;}
