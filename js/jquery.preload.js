@@ -5,7 +5,7 @@
 *
 * Requires: jQuery 1.2.3+
 */
-;( function( $ ){
+( function( $ ){
   $.preload = function(){
     var imgs = Object.prototype.toString.call( arguments[ 0 ]) === '[object Array]'
       ? arguments[ 0 ] : arguments;
