@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/font-awesome.min.css">
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.preload.min.js"></script>
 	<script type="text/javascript">
@@ -519,6 +520,8 @@
 <footer>
 	<p>&copy Copyright 2015 by Eudora. All rights reserved</p>
 </footer>
+<div id="gotop"><i class="fa fa-chevron-up"></i></div>
+
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/moment.js"></script>
 <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
@@ -549,7 +552,12 @@
 				return divId;
 			}
  
-			$(window).scroll(function() {	
+			$(window).scroll(function() {
+				if ( $(this).scrollTop() > 300){
+	            	$('#gotop').fadeIn("fast");
+		        } else {
+		            $('#gotop').stop().fadeOut("fast");
+		        }
 				var currentTop = $(window).scrollTop() + $('.navbar-header').height()+10;
 						$("ul.navbar-nav .active a").blur();
 						$("ul.navbar-nav .active").removeClass('active');
@@ -608,6 +616,11 @@
 				email.tooltip('show');
 			}
 		});
+		 $("#gotop").click(function(){
+        jQuery("html,body").animate({
+            scrollTop:0
+        },1000);
+	    });
 	});
 </script>
 </body>
